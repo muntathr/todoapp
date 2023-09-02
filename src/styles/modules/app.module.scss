@@ -1,0 +1,109 @@
+@import '../_mixins.scss';
+
+.app__wrapper {
+	width: 100%;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+.appHeader {
+	display: block;
+	height: 100vh;
+	width: 120px;
+	border-right: 1px solid rgba(#222222, 0.5);
+
+	h1{
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: var(--black-2);
+		text-align: center;
+		margin: 0 auto;
+		padding: 2rem 1rem 0.5rem 1rem;
+		width: max-content;
+		height: auto;
+	}
+
+	
+	button{
+		width: 60px;
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 1rem auto;
+		border-radius: 8px;
+		border: none;
+		background-color: transparent;
+		transition: .5s all ease-in-out;
+
+		&:hover{
+			background-color: var(--gray-2);
+		}
+	}
+
+	div{
+		button{
+			width: 60px;
+			height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 1rem auto;
+			border-radius: 50%;
+			border: none;
+			transition: .5s all ease-in-out;
+			background-color: #2b2b2b !important;
+
+			svg{
+				fill: #ffffff;
+			}
+	
+			&:hover{
+				background-color: #222222 !important;
+			}
+		}
+	}
+}
+
+.active{
+	background-color: var(--primaryPurple) !important;
+}
+.content__wrapper {
+	border-radius: 12px;
+
+	@include smallDeviceSize {
+		padding: 1.5rem;
+	}
+}
+
+.emptyText {
+	// display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 8px;
+	width: max-content;
+	height: auto;
+	margin-top: 20vh;
+
+	svg{
+		width: 400px !important;
+		height: 400px !important;
+	}
+
+	h2{
+		font-size: 26px;
+	}
+}
+.titleHeader{
+	font-size: 32px;
+	margin: 3rem auto 2.5rem auto;
+	font-weight: 700;
+}
+@media (max-width: 769px) {
+	.appHeader{
+		display: flex !important;
+		width: 100% !important;
+		height: 100px !important;
+	}
+	
+}

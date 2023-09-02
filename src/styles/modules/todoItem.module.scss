@@ -1,0 +1,92 @@
+@import '../_mixins.scss';
+
+.item {
+	display: block;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+	border-radius: 1rem;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.todoDetails {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+}
+.svgBox {
+	height: 36px !important;
+	width: 36px !important;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px !important;
+	cursor: pointer;
+	transition: 0.3s ease background-color;
+	&:hover {
+		background-color: var(--grey-2);
+	}
+	svg {
+		width: 100%;
+		height: 100%;
+		stroke: #000000;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.texts {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.todoText {
+	word-break: break-all;
+	font-weight: 500;
+	font-size: 18px;
+	color: #222222;
+
+	&--completed {
+		text-decoration: line-through;
+		opacity: 0.7;
+	}
+}
+.time {
+	display: block;
+	font-size: 1.2rem;
+	font-weight: 300;
+	color: #000000;
+	margin-top: 1rem;
+}
+.todoActions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+.icon {
+	width: 36px;
+	height: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem auto;
+	border-radius: 50%;
+	border: none;
+	transition: .5s all ease-in-out;
+	background-color: #2b2b2b !important;
+
+	svg{
+		fill: #ffffff;
+		scale: 1.5;
+	}
+
+	&:hover{
+		background-color: #222222 !important;
+	}
+}
